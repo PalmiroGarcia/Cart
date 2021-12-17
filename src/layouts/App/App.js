@@ -1,6 +1,28 @@
-import React from 'react';
-import { Dashboard } from '../Dashboard/Dashboard';
+import {React, useEffect} from 'react';
+import {Dashboard} from '../Dashboard/Dashboard';
+import {Routes, Route} from 'react-router-dom';
+import {ShopPage} from '../../pages/shop/shop';
+import {CartPage} from '../../pages/cart/cart';
+import {ToggleThemeHandler} from '../../utils/utils';
+import {Header} from '../../components/UI/Header/Header';
 
-export const App = () =>{
-  return <Dashboard />;
+export const App = () => {
+  const BODY = document.body;
+
+  useEffect(() => {
+    localStorage.getItem('Theme') && BODY.classList.add('DarkTheme');
+  }, []);
+
+  return <>
+    <Header/>
+    <Dashboard>
+      <Routes>
+        <Route path={'/'} element={<ShopPage/>}/>
+        <Route path={'/cart'} element={<CartPage/>}/>
+        <Route path={'*'} element={<ShopPage/>}/>
+      </Routes>
+
+      <button onClick={ToggleThemeHandler}>сменить тему</button>
+    </Dashboard>
+  </>;
 };
