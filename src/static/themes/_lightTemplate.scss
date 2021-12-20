@@ -1,5 +1,21 @@
-:root{
-  --background: #e6e6e6;
-  --font-color: #3d3d3d;
-  --link-color: #0f6bcb;
+:root {
+  --background: var(--light-grey);
+  --font-color: var(--grafite);
+  --link-color: var(--blue);
+  --border: var(--light-grey);
+
+
+  //MONOCHROME
+  --white: #ffffff;
+  --light-grey: #e6e6e6;
+  --dark-grey: #626262;
+  --grafite: #3d3d3d;
+
+  //RED
+  --biege: #ffcea2;
+  --coral: #f37575;
+  --dark-red: #741313;
+
+  //BLUE
+  --blue:#0f6bcb;
 }

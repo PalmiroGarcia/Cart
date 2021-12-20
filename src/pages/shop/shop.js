@@ -1,5 +1,8 @@
 import React from 'react';
+import {ProductList} from '../../components/shop/ProductList/ProductList';
 
 export const ShopPage = () =>{
-  return <h1>Shop</h1>;
+  return <>
+      <ProductList />
+    </>;
 };

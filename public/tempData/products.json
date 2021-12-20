@@ -1,0 +1,155 @@
+[
+  {
+    "_id": "board_1",
+    "title": "Element Earth Revolution Skateboard Deck",
+    "isStock": true,
+    "img": {
+      "desktop": "../TEMPORARY_IMGS/PRODUCTS/element_1.png",
+      "mobile": "../TEMPORARY_IMGS/PRODUCTS/element_1_mobile.png"
+    },
+    "prices": {
+      "price": 62,
+      "sale": 5
+    },
+    "properties": {
+      "size": "8.25",
+      "brand": "Element"
+    }
+  },
+  {
+    "_id": "board_2",
+    "title": "Alien Workshop Morgan Flag Skateboard Cruiser Deck",
+    "isStock": true,
+    "img": {
+      "desktop": "../TEMPORARY_IMGS/PRODUCTS/aw_1.png",
+      "mobile": "../TEMPORARY_IMGS/PRODUCTS/aw_1_mobile.png"
+    },
+    "prices": {
+      "price": 75.95,
+      "sale": 0
+    },
+    "properties": {
+      "size": "9.25",
+      "brand": "Alien Workshop"
+    }
+  },
+  {
+    "_id": "board_3",
+    "title": "Alien Workshop The Sect Skateboard Deck",
+    "isStock": true,
+    "img": {
+      "desktop": "../TEMPORARY_IMGS/PRODUCTS/aw_2.png",
+      "mobile": "../TEMPORARY_IMGS/PRODUCTS/aw_2_mobile.png"
+    },
+    "prices": {
+      "price": 69.95,
+      "sale": 10
+    },
+    "properties": {
+      "size": "8.25",
+      "brand": "Alien Workshop"
+    }
+  },
+  {
+    "_id": "board_4",
+    "title": "Flip Signature Skateboard Deck",
+    "isStock": true,
+    "img": {
+      "desktop": "../TEMPORARY_IMGS/PRODUCTS/flip_1.png",
+      "mobile": "../TEMPORARY_IMGS/PRODUCTS/flip_1_mobile.png"
+    },
+    "prices": {
+      "price": 70,
+      "sale": 20
+    },
+    "properties": {
+      "size": "8",
+      "brand": "Flip"
+    }
+  },
+  {
+    "_id": "board_5",
+    "title": "Zero Cole Skateboard Deck",
+    "isStock": false,
+    "img": {
+      "desktop": "../TEMPORARY_IMGS/PRODUCTS/zero_1.png",
+      "mobile": "../TEMPORARY_IMGS/PRODUCTS/zero_1_mobile.png"
+    },
+    "prices": {
+      "price": 70.45,
+      "sale": 0
+    },
+    "properties": {
+      "size": "8.25",
+      "brand": "Zero"
+    }
+  },
+  {
+    "_id": "board_6",
+    "title": "Zero Legacy Skateboard Deck",
+    "isStock": true,
+    "img": {
+      "desktop": "../TEMPORARY_IMGS/PRODUCTS/zero_2.png",
+      "mobile": "../TEMPORARY_IMGS/PRODUCTS/zero_2_mobile.png"
+    },
+    "prices": {
+      "price": 68.5,
+      "sale": 5
+    },
+    "properties": {
+      "size": "8",
+      "brand": "Zero"
+    }
+  },
+  {
+    "_id": "board_7",
+    "title": "Hydroponic Mexican Skull 2.0 Skateboard Deck",
+    "isStock": true,
+    "img": {
+      "desktop": "../TEMPORARY_IMGS/PRODUCTS/hydroponic_1.png",
+      "mobile": "../TEMPORARY_IMGS/PRODUCTS/hydroponic_1_mobile.png"
+    },
+    "prices": {
+      "price": 44.95,
+      "sale": 0
+    },
+    "properties": {
+      "size": "8",
+      "brand": "Hydroponic"
+    }
+  },
+  {
+    "_id": "board_8",
+    "title": "Hydroponic Pool Skateboard Deck",
+    "isStock": true,
+    "img": {
+      "desktop": "../TEMPORARY_IMGS/PRODUCTS/hydroponic_2.png",
+      "mobile": "../TEMPORARY_IMGS/PRODUCTS/hydroponic_2_mobile.png"
+    },
+    "prices": {
+      "price": 58.75,
+      "sale": 0
+    },
+    "properties": {
+      "size": "8.75",
+      "brand": "Hydroponic"
+    }
+  },
+  {
+    "_id": "board_9",
+    "title": "Hydroponic Sea Monster Skateboard Deck",
+    "isStock": false,
+    "img": {
+      "desktop": "../TEMPORARY_IMGS/PRODUCTS/hydroponic_3.png",
+      "mobile": "../TEMPORARY_IMGS/PRODUCTS/hydroponic_3_mobile.png"
+    },
+    "prices": {
+      "price": 46,
+      "sale": 0
+    },
+    "properties": {
+      "size": "8",
+      "brand": "Hydroponic"
+    }
+  }
+]
