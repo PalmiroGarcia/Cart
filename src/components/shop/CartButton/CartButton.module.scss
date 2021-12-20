@@ -1,0 +1,27 @@
+.Wrapper{
+  position: relative;
+}
+.ButtonWrapper{
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  margin-right: 10px;
+
+  img{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.Counter{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom:-10px;
+  left: -10px;
+  border-radius: 50%;
+  background: var(--coral);
+  color: var(--grafite);
+  text-align: center;
+}

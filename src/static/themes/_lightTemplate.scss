@@ -3,13 +3,16 @@
   --font-color: var(--grafite);
   --link-color: var(--blue);
   --border: var(--light-grey);
+  --card-background: linear-gradient(270deg, var(--light-grey-2) 0, var(--background) 93%);
 
 
   //MONOCHROME
   --white: #ffffff;
+  --light-grey-2: #bbb6b6;
   --light-grey: #e6e6e6;
   --dark-grey: #626262;
   --grafite: #3d3d3d;
+  --black: #000000;
 
   //RED
   --biege: #ffcea2;
@@ -17,5 +20,5 @@
   --dark-red: #741313;
 
   //BLUE
-  --blue:#0f6bcb;
+  --blue: #0f6bcb;
 }
