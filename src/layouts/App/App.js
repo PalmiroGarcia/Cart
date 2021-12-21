@@ -14,7 +14,6 @@ export const App = () => {
   }, []);
 
   const [counterProducts, setCounterProducts] = useState(0);
-
   return <CartContext.Provider value={[counterProducts, setCounterProducts]}>
     <Header />
     <Dashboard setCounterProducts={setCounterProducts}>

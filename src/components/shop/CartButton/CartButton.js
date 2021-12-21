@@ -1,9 +1,9 @@
 import {React, useState} from 'react';
 import styles from './CartButton.module.scss';
 
-export const CartButton = ({counterProducts}) =>{
+export const CartButton = ({counterProducts, onClickHandler}) =>{
   return<div className={styles.Wrapper}>
-    <button className={styles.ButtonWrapper} onClick={()=>{console.log('Hello Cart')}}>
+    <button className={styles.ButtonWrapper} onClick={onClickHandler}>
     {/*TODO переделать img, сделать спрайт*/}
     <img src="../../../../TEMPORARY_IMGS/cart.png" alt="cart"/>
   </button>

@@ -3,7 +3,7 @@ import {ProductItem} from '../ProductItem/ProductItem';
 import styles from './ProductList.module.scss';
 
 export const ProductList = () =>{
-  const [productsList, setProductsList] = useState({});
+  const [productsList, setProductsList] = useState([]);
   const [isLoaded, setIsLoaded]= useState(false);
 
   useEffect(()=>{
@@ -18,8 +18,8 @@ export const ProductList = () =>{
   }, []);
 
   return <ul className={styles.Wrapper}>
-    {isLoaded ? productsList.map(product => {
-      return <ProductItem product={product} key={product._id}/>;
+    {isLoaded ? productsList.map((product) => {
+        return <ProductItem product={product} key={product._id}/>;
     })
       : <h2>Loading...</h2>}
   </ul>
