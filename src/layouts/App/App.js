@@ -6,6 +6,7 @@ import {CartPage} from '../../pages/cart/cart';
 import {Header} from '../../components/UI/Header/Header';
 import {CartContext} from "../../context/CartContext";
 import {Button} from "../../components/UI/Button/Button";
+import {Filters} from "../../components/shop/Filters/Filters";
 
 export const App = () => {
   const BODY = document.body;
@@ -17,7 +18,7 @@ export const App = () => {
   const [counterProducts, setCounterProducts] = useState(0);
   return <CartContext.Provider value={[counterProducts, setCounterProducts]}>
     <Header />
-    <Button custom={true}>Hello</Button>
+    <Filters/>
     <Dashboard setCounterProducts={setCounterProducts}>
       <Routes>
         <Route path={'/'} element={<ShopPage/>}/>
