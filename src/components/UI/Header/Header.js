@@ -7,7 +7,7 @@ import {CartButton} from '../../shop/CartButton/CartButton';
 import {CartContext} from "../../../context/CartContext";
 import {Portal} from '../Portal/Portal';
 import {PopUp} from '../PopUp/PopUp';
-import {ReactDOM, createPortal} from 'react-dom';
+import {Button} from "../Button/Button";
 
 export const Header = () => {
   const [counterProducts] = useContext(CartContext);
@@ -30,7 +30,7 @@ export const Header = () => {
               <PopUp closePopup={()=>setPopupVisible(!popupVisible)} />
             </Portal>
           : null}
-        <button className={styles.Button} onClick={ToggleThemeHandler}>change theme</button>
+        <Button onClick={ToggleThemeHandler}>change theme</Button>
       </div>
     </header>
   </Container>;

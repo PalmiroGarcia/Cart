@@ -1,13 +1,14 @@
 import React, {useContext, useState} from 'react';
 import styles from './ProductItem.module.scss';
 import {CartContext} from "../../../context/CartContext";
+import {Button} from "../../UI/Button/Button";
 
 export const ProductItem = ({product}) => {
     const [, setCounterProducts] = useContext(CartContext);
     const [cart, setCart] = useState([]);
 
     return <li className={styles.Wrapper}>
-        <div className={styles.ImgWrapper}>
+        <div className={`${styles.ImgWrapper} AnimContainer`}>
             <picture>
                 <source src={product.img.mobile} media="(max-width:768px)" type="image/jpeg"/>
                 <source src={product.img.desktop} media="(min-width: 769px)" type="image/jpeg"/>
@@ -31,13 +32,21 @@ export const ProductItem = ({product}) => {
                 </p>
             </div>
             {/*TODO сделать компонент кнопку*/}
-            <button className={styles.Button} onClick={()=>{
-                setCart(prevState=>[
+            <Button classname={styles.Btn} onMouseEnter={(it) => {
+                it.target.parentNode.parentNode.querySelector('.AnimContainer').classList.add('Animate-start');
+            }} onMouseLeave={(itt) => {
+                itt.target.parentNode.parentNode.querySelector('.AnimContainer').classList.add('Animate-finish');
+                itt.target.parentNode.parentNode.querySelector('.AnimContainer').classList.remove('Animate-start');
+                setTimeout(()=>{
+                    itt.target.parentNode.parentNode.querySelector('.AnimContainer').classList.remove('Animate-finish');
+                },400);
+            }} onClick={() => {
+                setCart(prevState => [
                     ...prevState,
                     product,
                 ]);
-                setCounterProducts(prevState=>prevState + 1);
-            }}>I'm buying it!</button>
+                setCounterProducts(prevState => prevState + 1);
+            }}>TO CART</Button>
         </div>
     </li>;
 };

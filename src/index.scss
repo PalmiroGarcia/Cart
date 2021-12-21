@@ -40,3 +40,59 @@ a{
 button{
   cursor: pointer;
 }
+
+@keyframes Anim-start {
+  0%{
+    transform: rotate(-15deg) scale(1) translate(0, 0);
+  }
+  100%{
+    transform: rotate(0) scale(1.1) translate(-3px, -3px);
+  }
+}
+@keyframes Anim-finish {
+  0%{
+    transform: rotate(0deg) scale(1.1) translate(-3px, -3px);
+  }
+  100%{
+    transform: rotate(-15deg) scale(1) translate(0, 0);
+  }
+}
+
+@keyframes before-start {
+  0%{
+      transform: translate(-50%, -50%) rotate(0);
+      background: rgba(0, 0, 0, 0);
+  }
+  100%{
+      transform: translate(-50%, -50%) rotate(-11deg);
+      background: rgba(0, 0, 0, .4);
+  }
+}
+@keyframes before-finish {
+  0%{
+      transform: translate(-50%, -50%) rotate(-11deg);
+      background: rgba(0, 0, 0, .4);
+  }
+  100%{
+      transform: translate(-50%, -50%) rotate(0);
+      background: rgba(0, 0, 0, 0);
+  }
+}
+
+.Animate-start{
+  position: relative;
+  animation: Anim-start .12s linear both;
+
+  &:before{
+    animation: before-start .12s linear both;
+  }
+}
+
+.Animate-finish{
+  position: relative;
+  animation: Anim-finish .12s linear both;
+
+  &:before{
+    animation: before-finish .12s linear both;
+  }
+}

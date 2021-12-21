@@ -5,14 +5,13 @@
   width: calc(50% - 50px);
   background: var(--card-background);
   border-radius: 5px;
-  //color: var(--light-grey);
 
-  @media (min-width:769px) {
+  @media (min-width: 769px) {
     width: calc(33.33% - 50px);
   }
 }
 
-.ProductInfo{
+.ProductInfo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -21,11 +20,11 @@
   height: 100%;
 }
 
-.ProductName{
+.ProductName {
   width: 100%;
   font-size: 0.9em;
 
-  @media (min-width:769px) {
+  @media (min-width: 769px) {
     font-size: 1.1em;
   }
 }
@@ -46,58 +45,45 @@
   margin-top: -20px;
   margin-left: -15px;
   padding-bottom: 315px;
-  overflow: hidden;
+  //overflow: hidden;
   border-radius: 5px;
   transform: rotate(-15deg);
+
+  &:before{
+    position: absolute;
+    content: '';
+    width: calc(81%);
+    height: calc(100% - 70px);
+    top: 49%;
+    left: 22%;
+    transform: translate(-50%, -50%) rotate(0);
+    background: rgba(0, 0, 0, 0);
+    border-radius: 70px;
+  }
 }
 
-.PropertiesWrapper{
+:root .Animate{
+  animation: Anim 3ms linear;
+  background: red;
+}
+
+.PropertiesWrapper {
   margin-top: 20px;
 }
 
-.PricesWrapper{
+.PricesWrapper {
   margin-top: 20px;
 }
 
-.Price{
-  
+.Price {
+
 }
 
-.OldPrice{
+.OldPrice {
   padding-right: 5px;
 }
 
-.NewPrice{
+.NewPrice {
   color: var(--coral);
   text-shadow: 1px 1px 0 var(--black);
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 7px 0 var(--coral);
-  }
-}
-
-.Button{
-  position: relative;
-  bottom: 0;
-  font-weight: 600;
-  margin-top: 10px;
-  margin-left: 20px;
-  padding: 8px 20px;
-  text-transform: uppercase;
-  color: var(--font-color);
-  background-color: rgba(255, 255, 255, .2);
-  border-radius: 3px;
-  text-shadow: 1px 1px 2px var(--grafite);
-  box-shadow: 1px 1px 2px var(--grafite);
-
-  &:hover,
-  &:focus {
-    animation: pulse .4s;
-    box-shadow: 0 0 7px 1em rgba(#fff,0);
-    border-color: var(--coral);
-    color: var(--coral);
-    text-shadow: 1px 1px 2px var(--dark-red);
-  }
 }
