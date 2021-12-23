@@ -1,21 +1,10 @@
-import {React, useEffect, useState} from 'react';
+import {React, useContext, useEffect, useState} from 'react';
 import {ProductItem} from '../ProductItem/ProductItem';
 import styles from './ProductList.module.scss';
+import {CartContext} from '../../../context/CartContext';
 
 export const ProductList = () =>{
-  const [productsList, setProductsList] = useState([]);
-  const [isLoaded, setIsLoaded]= useState(false);
-
-  useEffect(()=>{
-    fetch('http://localhost:3000/tempdata/products.json')
-      .then((response) => {
-        return response.json();
-      })
-      .then((tempData) => {
-        setProductsList(tempData);
-        setIsLoaded(true);
-      });
-  }, []);
+  const [, , productsList, isLoaded] = useContext(CartContext);
 
   return <ul className={styles.Wrapper}>
     {isLoaded ? productsList.map((product) => {

@@ -16,9 +16,23 @@ export const App = () => {
   }, []);
 
   const [counterProducts, setCounterProducts] = useState(0);
-  return <CartContext.Provider value={[counterProducts, setCounterProducts]}>
+  const [productsList, setProductsList] = useState([]);
+  const [isLoaded, setIsLoaded]= useState(false);
+
+  useEffect(()=>{
+    fetch('http://localhost:3000/tempdata/products.json')
+      .then((response) => {
+        return response.json();
+      })
+      .then((tempData) => {
+        setProductsList(tempData);
+        setIsLoaded(true);
+      });
+  }, []);
+
+  return <CartContext.Provider value={[counterProducts, setCounterProducts, productsList, isLoaded]}>
     <Header />
-    <Filters/>
+    <Filters />
     <Dashboard setCounterProducts={setCounterProducts}>
       <Routes>
         <Route path={'/'} element={<ShopPage/>}/>

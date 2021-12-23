@@ -5,6 +5,48 @@
 }
 
 .Button{
-  width: 60px;
-  height: 30px;
+  position: relative;
+  width: 120px;
+  height: 70px;
+  margin: 5px;
+  background: linear-gradient(-20deg, #a12b63, #323866);
+  border-radius: 10px;
+  padding: 10px;
+  overflow: hidden;
+
+  &:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: linear-gradient(-20deg, #940d41, #ed9a01);
+    transition: opacity .3s linear;
+  }
+
+  &:hover, :focus{
+    &:before{
+      opacity: 1;
+    }
+  }
+}
+
+.ClearFilters{
+  position: relative;
+  width: 50px;
+  padding: 5px;
+  background: var(--light-grey);
+
+  &:hover, :focus{
+    &:before{
+      opacity: .3;
+    }
+  }
+}
+
+.SvgIcon{
+  position: relative;
+  z-index: 5
 }
