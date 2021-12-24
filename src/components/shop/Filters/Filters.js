@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useState} from 'react';
 import {useSearchParams} from 'react-router-dom';
 import styles from './Filters.module.scss';
 import {Button} from "../../UI/Button/Button";
@@ -7,12 +7,6 @@ import {Sprite} from '../../UI/Sprite/Sprite';
 export const Filters = () => {
   let [searchParams, setSearchParams] = useSearchParams();
 
-  // console.log(searchParams.get("user"));
-
-  // const changeFilterHandler = () =>{
-  //   setSearchParams({filter: });
-  // };
-
   const FILTERS = [
     'Hydroponic',
     'Flip',
@@ -20,50 +14,25 @@ export const Filters = () => {
     'Element',
   ];
 
-  let prevSearch,
-    newSearch;
-
-  const search = (filter) =>{
-     prevSearch = searchParams.get('filters');
-    console.log(prevSearch);
-
-    // setSearchParams({filters: [...asd] + filter})
-  };
-
-
 
   return <ul className={styles.Wrapper}>
     <li>
-      <Button classname={`${styles.Button} ${styles.ClearFilters}`} custom={true} onClick={()=>{console.log('All')}}>All</Button>
+      <Button classname={`${styles.Button} ${styles.ClearFilters}`} custom={true} onClick={()=>{setSearchParams()}}>All</Button>
     </li>
     {FILTERS.map((filter)=>{
 
       return <li key={filter}>
         <Button classname={styles.Button} custom={true} onClick={()=>{
-          setSearchParams({filters: filter});
-          search();
+          //TODO отрефачить и сделать чтобы при повторном клике фильтр снимался (возможно переделать на чекбоксы)
+
+          let arrayFilters = searchParams.getAll('filters');
+          arrayFilters.indexOf(filter) !== -1 && arrayFilters.splice(arrayFilters.indexOf(filter), 1);
+
+          return arrayFilters.indexOf(filter) === -1 ? setSearchParams({filters: [...arrayFilters, filter]}) : setSearchParams({filters: [...arrayFilters]});
         }}>
-          <Sprite width={"100"} height={"50"} id={filter} fill={filter === 'Hydroponic' || 'AlienWorkshop' || 'Flip'? "#FFFFFF" : null} className={styles.SvgIcon}/>
+          <Sprite width={"100"} height={"50"} id={filter} fill={filter === 'Hydroponic' || 'AlienWorkshop' || 'Flip' ? "#FFFFFF" : null} className={styles.SvgIcon}/>
         </Button>
       </li>
     })}
-
-
-
-    {/*<li>*/}
-    {/*  <Button classname={styles.Button} custom={true} onClick={()=>{console.log('2')}}>*/}
-    {/*    <Sprite width={"100"} height={"50"} id={"elem"}  className={styles.SvgIcon}/>*/}
-    {/*  </Button>*/}
-    {/*</li>*/}
-    {/*<li>*/}
-    {/*  <Button classname={styles.Button} custom={true} onClick={()=>{console.log('3')}}>*/}
-    {/*    <Sprite width={"100"} height={"50"} id={"hy"} fill={"#FFFFFF"} className={styles.SvgIcon}/>*/}
-    {/*  </Button>*/}
-    {/*</li>*/}
-    {/*<li>*/}
-    {/*  <Button classname={styles.Button} custom={true} onClick={()=>{console.log('3')}}>*/}
-    {/*    <Sprite width={"100"} height={"50"} id={"aw"} fill={"#FFFFFF"} className={styles.SvgIcon}/>*/}
-    {/*  </Button>*/}
-    {/*</li>*/}
   </ul>
 };
